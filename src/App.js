@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route exact path="/" element={<Home />} /> 
+            <Route exact path="/jshopify" element={<Home />} /> 
             <Route exact path="/cart" element={<Cart />} /> 
           </Routes>
         </BrowserRouter>

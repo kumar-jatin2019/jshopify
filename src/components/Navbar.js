@@ -19,10 +19,10 @@ class Navbar extends Component {
         return (
             <nav className="nav-wrapper">
                 <div className="container">
-                     <Link to="/" className="brand-logo">Shopping</Link>
+                     <Link to="/jshopify" className="brand-logo">Shopping</Link>
                     
                      <ul className="right">
-                         <li><Link to="/">Shop</Link></li>
+                         <li><Link to="/jshopify">Shop</Link></li>
                          <li><Link to="/cart">My cart</Link></li>
                          <li><Link to="/cart">{ this.props.quant > 0 ?  <span className="badge white" > {this.props.quant}</span>:''}</Link></li>
                          <li><i className="material-icons">shopping_cart</i></li>
