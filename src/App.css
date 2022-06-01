@@ -37,6 +37,16 @@
   border-radius: 9px;
 }
 
+
+.nav-wrapper {
+  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  /* left: 0; */
+  width: 100%;
+  /* height: 88px; */
+  z-index: 2;
+}
 .label-warning[href],
 .badge-warning[href] {
   background-color: #c67605;
@@ -60,6 +70,15 @@
   position: absolute !important;
   min-width: 1rem !important;
 }
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {

@@ -8,37 +8,38 @@ import '../App.css';
 
 class Navbar extends Component {
 
-    constructor(){
+    constructor() {
         super()
 
-        this.setState ={
-            show:false
+        this.setState = {
+            show: false
         }
     }
     render() {
+
         return (
             <nav className="nav-wrapper">
                 <div className="container">
-                     <Link to="/jshopify" className="brand-logo">Shopping</Link>
-                    
-                     <ul className="right">
-                         <li><Link to="/jshopify">Shop</Link></li>
-                         <li><Link to="/cart">My cart</Link></li>
-                         <li><Link to="/cart">{ this.props.quant > 0 ?  <span className="badge white" > {this.props.quant}</span>:''}</Link></li>
-                         <li><i className="material-icons">shopping_cart</i></li>
-                     </ul>
-                 </div>
-             </nav>
+                    <Link to="/jshopify" className="brand-logo">Shopping</Link>
+
+                    <ul className="right">
+                        <li><Link to="/jshopify">Shop</Link></li>
+                        <li><Link to="/cart">My cart</Link></li>
+                        <li><Link to="/cart">{this.props.quant > 0 ? <span className="badge white" > {this.props.quant}</span> : ''}</Link></li>
+                        <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li>
+                    </ul>
+                </div>
+            </nav>
         );
     }
 }
 
 
-const mapStateToProps = (state)=>{
-    return{
+const mapStateToProps = (state) => {
+    return {
         addedItems: state.addedItems,
         total: state.total,
-        quant:state.quant
+        quant: state.quant
     }
 }
 export default connect(mapStateToProps)(Navbar)
